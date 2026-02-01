@@ -9,6 +9,7 @@ metadata:
     environment: development
 spec:
   containers:
-  - name: nginx
-    image: nginxejrbewkj
-        
+  # - name: nginx
+  #   image: nginxejrbewkj
+  - name: almalinux
+    image: almalinux:9
