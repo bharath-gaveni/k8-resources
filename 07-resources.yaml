@@ -6,7 +6,7 @@ metadata:
   labels:
     project: roboshop
     environment: development
-  annotaions:
+  annotations:
     imageregistry: http://hub.docker.com
 
 spec:
@@ -20,5 +20,5 @@ spec:
       limits:
         memory: "120Mi"
         cpu: "150m"
-          
+
 
