@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: service-demo
+  namespace: roboshop
+  labels:
+    project: roboshop
+    environment: dev
+    component: frontend
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    
+
+

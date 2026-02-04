@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Deployment-demo
+  namespace: roboshop
+  # these are Deployment level (replicaset) labels
+  labels:
+    project: roboshop
+    environment: development
+    purpose: Deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      # these labels are used to select the Pods
+      project: roboshop
+      environment: development
+      purpose: Deployment
+  template:
+    metadata:
+      labels:
+      # Pod defination
+      project: roboshop
+      environment: development
+      purpose: Deployment
+    spec:
+      containers:
+      - name: nginx
+        image: nginx    
