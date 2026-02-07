@@ -8,18 +8,18 @@ spec:
   - name: nginx
     image: nginx
     volumeMounts:
-    - name: nginx-logs
+    - name: nginx-logs # created volume/storage nginx-logs we are placing it in mountpath to be accessed by nginx container
       mountPath: /var/log/nginx
 
   - name: almalinux
     image: alamalinux:9
     CMD: ["sleep" , "1000"] 
     volumeMounts:
-    - name: nginx-logs
+    - name: nginx-logs # created volume/storage nginx-logs we are placing it in mountpath to be accessed by alamalinux container
       mountPath: /mnt/nginx-log
       readOnly: true
-      
+
   volumes:
-  - name: nginx-logs
+  - name: nginx-logs # when Pod is created it will create storage/volume with name nginx-logs
     emptyDir:
       sizeLimit: 100mi  
